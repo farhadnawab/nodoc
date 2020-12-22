@@ -441,7 +441,7 @@ header .main-nav li:nth-child(3) a:hover {
     margin: auto;
 }
 
-.cross-collaboration-section .dropdown {
+.cross-collaboration-section .dropdowninfo {
     background: #fff;
     text-align: left;
     max-width: 300px;
@@ -449,8 +449,10 @@ header .main-nav li:nth-child(3) a:hover {
     border: 2px solid #000;
     color: #000;
     position:relative;
+    opacity: 0;
+    margin: auto;
 }
-.cross-collaboration-section .dropdown:before {
+.cross-collaboration-section .dropdowninfo:before {
     content:'';
     height: 10px;
     width: 26px;
@@ -463,7 +465,7 @@ header .main-nav li:nth-child(3) a:hover {
     background-position:center bottom;
 }
 
-.cross-collaboration-section .dropdown > div{
+.cross-collaboration-section .dropdowninfo > div{
     display:flex;
     font-size: 13px;
     padding:0 12px;
@@ -472,7 +474,14 @@ header .main-nav li:nth-child(3) a:hover {
     align-items: center;
 }
 
-.cross-collaboration-section .dropdown .input {
+.cross-collaboration-section .dropdowninfo .row1,
+.cross-collaboration-section .dropdowninfo .row2 {
+    opacity: 0;
+    height: 0;
+}
+
+
+.cross-collaboration-section .dropdowninfo .input {
     background:url(../images/input.svg) no-repeat;
     background-position: left top;
     height: 23px;
@@ -480,7 +489,7 @@ header .main-nav li:nth-child(3) a:hover {
     padding: 5px 0 0 22px;
 }
 
-.cross-collaboration-section .dropdown .with {
+.cross-collaboration-section .dropdowninfo .with {
     margin:0 6px;
     color:#aaa;
 }
@@ -549,7 +558,7 @@ header .main-nav li:nth-child(3) a:hover {
     left: 0;
     right: 0;
     position: absolute;
-    bottom: -150px;
+    bottom: -40px;
 }
 
 .cross-collaboration-section .graphic .part2 .selection3 .cursor {
@@ -1058,6 +1067,49 @@ footer .copyright {
 }
 
 
+.dropdowninfo .input {
+    background: #eaeaea;
+    padding: 2px 0;
+    color: #000;
+    max-width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    max-width: 300px;
+}
+
+.dropdowninfo .input .type {
+    position: relative;
+    width: auto;
+    word-break: break-all;
+    overflow: hidden;
+    display: inline-block;
+    padding-right: 5px;
+    letter-spacing: 0.03em;
+}
+
+.dropdowninfo .team {
+    background: #fff;
+    padding: 2px 0;
+    color: #000;
+    max-width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    max-width: 300px;
+}
+
+.dropdowninfo .team .type {
+    position: relative;
+    width: auto;
+    word-break: break-all;
+    overflow: hidden;
+    display: inline-block;
+}
+
+
 /* TYPING 1 */
 
 .typing .type:before {
@@ -1170,6 +1222,63 @@ footer .copyright {
     animation-delay: 14.4s;
 }
 
+
+/* TYPING 4 */
+
+.dropdowninfo .row1 .input .type:before {
+    animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+    animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
+    animation-iteration-count: 1, 1, 100, 2;
+    animation-delay:4.5s, 4.5s, 4.5s, 4.1s;
+}
+
+.dropdowninfo .row1 .input .type:after {
+    animation: lines 1.4285714286s steps(1, end) 1;
+    animation-fill-mode: both;
+    animation-delay: 5s;
+}
+
+.dropdowninfo .row1 .team .type:before {
+    animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+    animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
+    animation-iteration-count: 1, 1, 100, 2;
+    animation-delay:4.5s, 4.5s, 4.5s, 4.1s;
+}
+
+.dropdowninfo .row1 .team .type:after {
+    animation: lines 1.4285714286s steps(1, end) 1;
+    animation-fill-mode: both;
+    animation-delay: 5s;
+}
+
+
+.dropdowninfo .row2 .type:before {
+    animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+    animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
+    animation-iteration-count: 1, 1, 100, 2;
+    animation-delay:6.5s, 6.5s, 6.5s, 6.1s;
+}
+
+.dropdowninfo .row2 .input .type:after {
+    animation: lines 1.4285714286s steps(1, end) 1;
+    animation-fill-mode: both;
+    animation-delay: 7s;
+}
+
+.dropdowninfo .row2 .team .type:before {
+    animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+    animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
+    animation-iteration-count: 1, 1, 100, 2;
+    animation-delay:6.5s, 6.5s, 6.5s, 6.1s;
+}
+
+.dropdowninfo .row2 .team .type:after {
+    animation: lines 1.4285714286s steps(1, end) 1;
+    animation-fill-mode: both;
+    animation-delay: 7s;
+}
+
+
 @supports (width: 1ch) {
     .visible .typing .type:before,
     .visible .typing .type:after,
@@ -1195,6 +1304,33 @@ footer .copyright {
         width: 100%;
         background-color: #191919;
     }
+
+    .visible .dropdowninfo .input .type:before,
+    .visible .dropdowninfo .input .type:after{
+        box-sizing: border-box;
+        content: '';
+        position: absolute;
+        z-index: 1;
+        display: block;
+        height: 0.875rem;
+        width: 100%;
+        background-color: #eaeaea;
+    }
+
+    
+    .visible .dropdowninfo .team .type:before,
+    .visible .dropdowninfo .team .type:after{
+        box-sizing: border-box;
+        content: '';
+        position: absolute;
+        z-index: 1;
+        display: block;
+        height: 0.875rem;
+        width: 100%;
+        background-color: #fff;
+    }
+
+
     /* TYPING 1 */
     .visible .typing .type:before {
         border-left: 2px solid transparent;
@@ -1242,6 +1378,37 @@ footer .copyright {
         animation-iteration-count: 1, 0, 1, infinite;
     }
     .visible .typing2 .type:after {
+        content: '';
+        height: 100%;
+        top: 100%;
+        left: 0;
+        margin-top: 1.8em;
+    }
+
+    /* TYPING 3 */
+    .visible .dropdowninfo .input .type:before {
+        border-left: 1px solid transparent;
+        animation-name: letters, lines, cursor-type-gray, cursor-wait-gray;
+        animation-fill-mode: both, both, backwards, backwards;
+        animation-iteration-count: 1, 0, 1, infinite;
+    }
+
+    .visible .dropdowninfo .input .type:after {
+        content: '';
+        height: 100%;
+        top: 100%;
+        left: 0;
+        margin-top: 1.8em;
+    }
+
+    .visible .dropdowninfo .team .type:before {
+        border-left: 1px solid transparent;
+        animation-name: letters, lines, cursor-type-gray, cursor-wait-gray;
+        animation-fill-mode: both, both, backwards, backwards;
+        animation-iteration-count: 1, 0, 1, infinite;
+    }
+
+    .visible .dropdowninfo .team .type:after {
         content: '';
         height: 100%;
         top: 100%;
@@ -1358,13 +1525,36 @@ footer .copyright {
 }
 
 .visible.cross-collaboration-section .graphic .part2 .selection3 .cursor {
-    animation-name: collabCursor3;
-    animation-delay: 3s;
-    animation-duration: 0.7s;
-    right: -300px;
+    animation-name: collabCursor3, collabCursor3-1, collabCursor3-2, collabCursor3-3;
+    animation-delay: 3s, 3.9s, 4.5s, 5s;
+    animation-duration: 0.7s,0.5s,0.5s,0.5s;
+    left: 120%;
     top: -180px;
+    animation-fill-mode: forwards, forwards, forwards, forwards;
+    transition-timing-function: ease-in-out;
+}
+
+
+.visible.cross-collaboration-section .graphic .part2 .selection3 .dropdowninfo {
+    animation-name: collabInfoShow;
+    animation-delay: 4s;
+    animation-duration: 0.1s;
     animation-fill-mode: forwards;
     transition-timing-function: ease-in-out;
+}
+
+.visible.cross-collaboration-section .graphic .part2 .selection3 .row1 {
+    animation-name: addOption;
+    animation-delay: 4.4s;
+    animation-duration: 0.1s;
+    animation-fill-mode:forwards;
+}
+
+.visible.cross-collaboration-section .graphic .part2 .selection3 .row2 {
+    animation-name: addOption;
+    animation-delay: 6s;
+    animation-duration: 0.1s;
+    animation-fill-mode:forwards;
 }
 
 .visible.cross-collaboration-section .graphic .part2 .selection3 .info {
@@ -1374,6 +1564,7 @@ footer .copyright {
     animation-fill-mode: forwards;
     transition-timing-function: ease-in-out;
 }
+
 
 
 /* Section 5 */
@@ -1433,6 +1624,23 @@ footer .copyright {
         opacity: 0;
     }
 }
+
+@keyframes addOption {
+    0% {
+        opacity:0;
+        height:0;
+    }
+    30% {
+        height:auto;
+        opacity:1;
+    }
+
+    100% {
+        height:auto;
+        opacity:1;
+    }
+}
+
 
 @keyframes scaleup {
     from {
@@ -1500,12 +1708,45 @@ footer .copyright {
 
 @keyframes collabCursor3 {
     from {
-        right: -300px;
+        left: 120%;
         top: -180px;
     }
     to {
-        right: 25%;
-        top: -50px;
+        left: 45%;
+        top: -100%;
+    }
+}
+
+@keyframes collabCursor3-1 {
+    from {
+        left: 45%;
+        top: -100%;
+    }
+    to {
+        left: 35%;
+        top: 75%;
+    }
+}
+
+@keyframes collabCursor3-2 {
+    from {
+        left: 35%;
+        top: 75%;
+    }
+    to {
+        left: 34%;
+        top: 73%;
+    }
+}
+
+@keyframes collabCursor3-3 {
+    from {
+        left: 44%;
+        top: 66%;
+    }
+    to {
+        left: 35%;
+        top: 80%;
     }
 }
 
@@ -1675,7 +1916,7 @@ footer .copyright {
     }
 }
 
-@keyframes cursor-type {
+@keyframes cursor-type-pink {
     50% {
         border-color: #EB5C68;
     }
@@ -1684,6 +1925,12 @@ footer .copyright {
 @keyframes cursor-type-orange {
     50% {
         border-color: #FBB374;
+    }
+}
+
+@keyframes cursor-type-gray {
+    50% {
+        border-color: #333;
     }
 }
 
@@ -1708,6 +1955,18 @@ footer .copyright {
     }
     40% {
         box-shadow: inset 2px 0 0 0 #FBB374;
+    }
+}
+
+@keyframes cursor-wait-gray {
+    0% {
+        box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0);
+    }
+    1% {
+        box-shadow: inset 1px 0 0 0 #333;
+    }
+    40% {
+        box-shadow: inset 1px 0 0 0 #333;
     }
 }
 
