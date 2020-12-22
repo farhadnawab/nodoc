@@ -126,7 +126,7 @@
 
         </div>
 
-        
+
         <div class="graphic mobile">
             <img src="assets/images/editor/banner-mobile.svg">
         </div>
@@ -224,7 +224,8 @@
         <div class="container">
             <h5>Connected</h5>
             <h3>Cross-collaboration<br><span>at any level</span></h3>
-            <p>Extend the capabilities of your Docs at a high-level. Group pages into Sections, import entire sections, pages, or components within other Docs to enable cross-doc collaboration, and share specifics parts of the Doc without giving access to everything. </p>
+            <p>Extend the capabilities of your Docs at a high-level. Group pages into Sections, import entire sections, pages, or components within other Docs to enable cross-doc collaboration, and share specifics parts of the Doc without giving access to
+                everything. </p>
 
             <div class="graphic desktop">
                 <div class="part1">
@@ -268,15 +269,41 @@
             <p>Group any content such as images, text, embeds, tables, and more within components. Reuse them<br>anywhere, anytime. Any change will be reflected wherever the component is being used. </p>
 
             <div class="graphic desktop">
-                <div class="image-inactive"><img src="assets/images/multi-sharing/graphic.png" srcset="assets/images/multi-sharing/graphic.png 1x, assets/images/multi-sharing/graphic@2x.png 2x"></div>
-                <div class="image-active"><img src="assets/images/multi-sharing/graphic-active.png" srcset="assets/images/multi-sharing/graphic-active.png 1x, assets/images/multi-sharing/graphic-active@2x.png 2x"></div>
+                <div class="image">
+                    <!-- <img src="assets/images/multi-sharing/graphic.png" srcset="assets/images/multi-sharing/graphic.png 1x, assets/images/multi-sharing/graphic@2x.png 2x"> -->
+                    <img src="assets/images/multi-screen.svg" alt="Multi Sharing">
+                </div>
+
+                <div class="screen1">
+                    <div class="typing2">
+                        <p class="notype">We target two segments: mobile game users and</p>
+                        <p class="notype">organizations that want to reach them. In both of</p>
+                        <p class="type">these segments, customers are computer and</p>
+                        <p class="type">mobile phone savvy and enjoy creative</p>
+                        <p class="type">experiences.</p>
+                    </div>
+                </div>
+
+                <div class="screen2">
+                    <div class="typing2">
+                        <p class="notype">We target two segments: mobile game users and</p>
+                        <p class="notype">organizations that want to reach them. In both of</p>
+                        <p class="type">these segments, customers are computer and</p>
+                        <p class="type">mobile phone savvy and enjoy creative</p>
+                        <p class="type">experiences.</p>
+                    </div>
+                </div>
+
+                <div class="cursor">
+                    <img src="assets/images/multi-level-cursor.svg" alt="Multi Sharing">
+                </div>
             </div>
-            
-        
+
+
             <div class="graphic mobile">
                 <img src="assets/images/multi-sharing/mobile-graphic.png">
             </div>
-            
+
         </div>
     </section>
 
@@ -408,28 +435,33 @@
         (function($) {
 
             $.fn.visible = function(partial) {
-            
-                var $t            = $(this),
-                    $w            = $(window),
-                    viewTop       = $w.scrollTop(),
-                    viewBottom    = viewTop + $w.height(),
-                    _top          = $t.offset().top,
-                    _bottom       = _top + $t.height(),
-                    compareTop    = partial === true ? _bottom : _top,
+
+                var $t = $(this),
+                    $w = $(window),
+                    viewTop = $w.scrollTop(),
+                    viewBottom = viewTop + $w.height(),
+                    _top = $t.offset().top,
+                    _bottom = _top + $t.height(),
+                    compareTop = partial === true ? _bottom : _top,
                     compareBottom = partial === true ? _top : _bottom;
-            
+
                 return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
             };
-            
-            })(jQuery);
 
-            $(window).scroll(function(event) {
+        })(jQuery);
+
+        $(window).scroll(function(event) {
 
             $("section").each(function(i, el) {
                 var el = $(el);
                 if (el.visible(true)) {
-                    el.addClass("visible"); 
+                    el.addClass("visible");
+
+                    setTimeout(() => {
+                        el.addClass("loaded");
+                    }, 2000);
+
                 } else {
                     el.removeClass("visible");
                 }
@@ -438,4 +470,5 @@
         });
     </script>
 </body>
+
 </html>
