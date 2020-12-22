@@ -401,7 +401,7 @@ header .main-nav li:nth-child(3) a:hover {
 /* CROSS COLLABORATION SECTION */
 
 .cross-collaboration-section {
-    padding: 75px 0;
+    padding: 75px 0 50px;
     text-align: center;
     overflow: hidden;
 }
@@ -439,6 +439,50 @@ header .main-nav li:nth-child(3) a:hover {
     line-height: 25px;
     max-width: 900px;
     margin: auto;
+}
+
+.cross-collaboration-section .dropdown {
+    background: #fff;
+    text-align: left;
+    max-width: 300px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    color: #000;
+    position:relative;
+}
+.cross-collaboration-section .dropdown:before {
+    content:'';
+    height: 10px;
+    width: 26px;
+    position:absolute;
+    bottom:100%;
+    left:50%;
+    margin: 0 0 0 -13px;
+    display:block;
+    background:url(../images/arrow-box.svg) no-repeat;
+    background-position:center bottom;
+}
+
+.cross-collaboration-section .dropdown > div{
+    display:flex;
+    font-size: 13px;
+    padding:0 12px;
+    color:#000;
+    margin: 6px 0;
+    align-items: center;
+}
+
+.cross-collaboration-section .dropdown .input {
+    background:url(../images/input.svg) no-repeat;
+    background-position: left top;
+    height: 23px;
+    min-width: 118px;
+    padding: 5px 0 0 22px;
+}
+
+.cross-collaboration-section .dropdown .with {
+    margin:0 6px;
+    color:#aaa;
 }
 
 .cross-collaboration-section .graphic {
@@ -524,7 +568,7 @@ header .main-nav li:nth-child(3) a:hover {
 /* MULTI SHARING SECTION */
 
 .multi-sharing-section {
-    padding: 75px 0;
+    padding: 50px 0;
     text-align: center;
 }
 
@@ -567,31 +611,25 @@ header .main-nav li:nth-child(3) a:hover {
     display:inline-block;
 }
 
-.multi-sharing-section .graphic:after {
-    content: '';
-    padding-top: 60%;
-    display: block;
-}
-
 .multi-sharing-section .graphic>* {
 }
 
 .multi-sharing-section .graphic .screen1{
     position:absolute;
-    top:4%;
+    top: 8%;
     left:6%;
 }
 
 .multi-sharing-section .graphic .screen2{
     position:absolute;
-    top:11.4%;
+    top: 21.2%;
     left:55.7%;
 }
 
 .multi-sharing-section .graphic .cursor {
     position:absolute;
     z-index:999;
-    top:2%;
+    top: 4%;
     left:50%;
 }
 
@@ -651,7 +689,7 @@ header .main-nav li:nth-child(3) a:hover {
     transform: scale(0.2);
 }
 
-.powerful-graph-section .graphic.graphic.mobile
+
 /* WAITLIST SECTION */
 
 .waitlist-section {
@@ -1271,16 +1309,16 @@ footer .copyright {
 
 .visible.cross-collaboration-section .graphic .part1 .selection {
     animation-name: collabTextDragging;
-    animation-delay: 2.3s;
-    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
     transition-timing-function: ease-in-out;
 }
 
 .visible.cross-collaboration-section .graphic .part1 .selection .cursor {
     animation-name: collabCursor1;
-    animation-delay: 1s;
-    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
     transition-timing-function: ease-in, visible-out;
 }
@@ -1289,15 +1327,15 @@ footer .copyright {
     border: 2px solid transparent;
     border-radius: 2px;
     animation-name: collabTextSelect;
-    animation-delay: 1s;
-    animation-duration: 1.2s;
+    animation-delay: 0.5s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
     transition-timing-function: linear;
 }
 
 .visible.cross-collaboration-section .graphic .part1 .selection .info {
     animation-name: collabInfoShow;
-    animation-delay: 2s;
+    animation-delay: 0.5s;
     animation-duration: 0.1s;
     animation-fill-mode: forwards;
     transition-timing-function: ease-in-out;
@@ -1305,7 +1343,7 @@ footer .copyright {
 
 .visible.cross-collaboration-section .graphic .part2 .selection2 .info {
     animation-name: collabInfoShow;
-    animation-delay: 4s;
+    animation-delay: 3s;
     animation-duration: 0.1s;
     animation-fill-mode: forwards;
     transition-timing-function: ease-in-out;
@@ -1313,16 +1351,16 @@ footer .copyright {
 
 .visible.cross-collaboration-section .graphic .part2 .selection2 .cursor {
     animation-name: collabCursor2;
-    animation-delay: 3s;
-    animation-duration: 1s;
+    animation-delay: 2.2s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
     transition-timing-function: ease-in-out;
 }
 
 .visible.cross-collaboration-section .graphic .part2 .selection3 .cursor {
     animation-name: collabCursor3;
-    animation-delay: 5s;
-    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-duration: 0.7s;
     right: -300px;
     top: -180px;
     animation-fill-mode: forwards;
@@ -1331,7 +1369,7 @@ footer .copyright {
 
 .visible.cross-collaboration-section .graphic .part2 .selection3 .info {
     animation-name: collabInfoShow;
-    animation-delay: 6.25s;
+    animation-delay: 4s;
     animation-duration: 0.1s;
     animation-fill-mode: forwards;
     transition-timing-function: ease-in-out;
@@ -1357,7 +1395,7 @@ footer .copyright {
 
 /* .self-organization-section */
 
-.visible.self-organization-section .col-md-6:first-child {
+.visible.self-organization-section .col-md-6:first-child:not(.loaded.self-organization-section .col-md-6:first-child) {
     animation-name: animateup;
     animation-delay: 0.5s;
     animation-duration: 1s;
@@ -1374,8 +1412,8 @@ footer .copyright {
 
 .visible.multi-sharing-section .graphic .cursor {
     animation-name: multiLevelCursor, multiLevelCursor1;
-    animation-delay: 4s, 5.5s;
-    animation-duration: 1s, 1s;
+    animation-delay: 3s, 4.5s;
+    animation-duration: 1s, 0.5s;
     animation-fill-mode: both, forwards;
     transition-timing-function: ease-in-out;
 }
@@ -1418,22 +1456,22 @@ footer .copyright {
 
 @keyframes multiLevelCursor {
     from {
-        top:2%;
+        top:4%;
         left:50%;
     }
     to {
-        top:8%;
+        top:16%;
         left:16%;
     }
 }
 
 @keyframes multiLevelCursor1 {
     from {
-        top:8%;
+        top:16%;
         left:16%;
     }
     to {
-        top:18%;
+        top:32%;
         left:14%;
     }
 }
@@ -1768,26 +1806,26 @@ footer .copyright {
     }
     .self-organization-section {
         text-align: center;
-        padding: 50px 10px;
+        padding: 35px 10px;
     }
     .self-organization-section .col-md-6:first-child {
         order: 5;
         padding: 50px 20px 0;
     }
     .cross-collaboration-section {
-        padding: 50px 10px
+        padding: 35px 10px
     }
     .multi-sharing-section {
-        padding: 50px 10px;
+        padding: 35px 10px;
     }
     .powerful-graph-section {
-        padding: 50px 10px;
+        padding: 35px 10px;
     }
     .waitlist-section {
-        padding: 50px 10px;
+        padding: 35px 10px;
     }
     .statement-section {
-        padding: 50px 10px;
+        padding: 35px 10px;
     }
     footer {
         padding: 40px 10px;
