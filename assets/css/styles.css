@@ -495,7 +495,7 @@ header .main-nav li:nth-child(3) a:hover {
 }
 
 .cross-collaboration-section .graphic {
-    margin: 50px 0 200px;
+    margin: 50px 0;
 }
 
 .cross-collaboration-section .graphic:after {
@@ -559,6 +559,7 @@ header .main-nav li:nth-child(3) a:hover {
     right: 0;
     position: absolute;
     bottom: -40px;
+    min-height: 140px;
 }
 
 .cross-collaboration-section .graphic .part2 .selection3 .cursor {
@@ -1226,10 +1227,10 @@ footer .copyright {
 /* TYPING 4 */
 
 .dropdowninfo .row1 .input .type:before {
-    animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+    animation-duration: 1s, 1s, 0.0285714286s, 0.8s;
     animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
     animation-iteration-count: 1, 1, 100, 2;
-    animation-delay:4.5s, 4.5s, 4.5s, 4.1s;
+    animation-delay: 2.5s, 2.5s, 2.5s, 2.1s;
 }
 
 .dropdowninfo .row1 .input .type:after {
@@ -1239,43 +1240,43 @@ footer .copyright {
 }
 
 .dropdowninfo .row1 .team .type:before {
-    animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+    animation-duration: 1s, 1s, 0.0285714286s, 0.8s;
     animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
     animation-iteration-count: 1, 1, 100, 2;
-    animation-delay:4.5s, 4.5s, 4.5s, 4.1s;
+    animation-delay: 3.5s, 3.5s, 3.5s, 3.1s;
 }
 
 .dropdowninfo .row1 .team .type:after {
-    animation: lines 1.4285714286s steps(1, end) 1;
+    animation: lines 1s steps(1, end) 1;
     animation-fill-mode: both;
-    animation-delay: 5s;
+    animation-delay: 4s;
 }
 
 
 .dropdowninfo .row2 .type:before {
-    animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+    animation-duration: 1s, 1s, 0.0285714286s, 0.8s;
     animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
     animation-iteration-count: 1, 1, 100, 2;
-    animation-delay:6.5s, 6.5s, 6.5s, 6.1s;
+    animation-delay: 5.5s, 5.5s, 5.5s, 5.1s;
 }
 
 .dropdowninfo .row2 .input .type:after {
     animation: lines 1.4285714286s steps(1, end) 1;
     animation-fill-mode: both;
-    animation-delay: 7s;
+    animation-delay: 6s;
 }
 
 .dropdowninfo .row2 .team .type:before {
-    animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+    animation-duration: 1s, 1s, 0.0285714286s, 0.8s;
     animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
     animation-iteration-count: 1, 1, 100, 2;
-    animation-delay:6.5s, 6.5s, 6.5s, 6.1s;
+    animation-delay: 6.5s, 6.5s, 6.5s, 6.7s;
 }
 
 .dropdowninfo .row2 .team .type:after {
-    animation: lines 1.4285714286s steps(1, end) 1;
+    animation: lines 1s steps(1, end) 1;
     animation-fill-mode: both;
-    animation-delay: 7s;
+    animation-delay: 7.5s;
 }
 
 
@@ -1422,16 +1423,16 @@ footer .copyright {
 
 .visible .drop-placeholder {
     animation-name: dropposition;
-    animation-duration: 2s;
-    animation-delay: 6.7s;
+    animation-duration: 1.5s;
+    animation-delay: 2.7s;
     animation-fill-mode: forwards;
     transition: none;
 }
 
 .visible .drop-placeholder .cursor1 {
     animation-name: cursor1, drag, movecursor;
-    animation-delay: 3s, 6.5s, 8.7s;
-    animation-duration: 2s, 2s, 2s;
+    animation-delay: 1s, 2.5s, 3.7s;
+    animation-duration: 1s, 1s, 1s;
     animation-fill-mode: both, forwards, forwards;
     transition-timing-function: ease-in-out, linear, linear;
 }
@@ -1439,8 +1440,8 @@ footer .copyright {
 .visible .drop-placeholder .object {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     animation-name: dragndrop;
-    animation-duration: 2s;
-    animation-delay: 6.5s;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
     animation-fill-mode: both;
     transition-timing-function: linear;
 }
@@ -1451,15 +1452,15 @@ footer .copyright {
 .visible .editor .thumb .image {
     animation-name: dragthumb;
     animation-duration: 1s;
-    animation-delay: 10.7s;
+    animation-delay: 9.7s;
     animation-fill-mode: forwards;
     transition: none;
 }
 
 .visible .editor .thumb .cursor2 {
     animation-name: cursor2;
-    animation-delay: 8s;
-    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     transition-timing-function: ease-in-out;
 }
@@ -1525,19 +1526,19 @@ footer .copyright {
 }
 
 .visible.cross-collaboration-section .graphic .part2 .selection3 .cursor {
-    animation-name: collabCursor3, collabCursor3-1, collabCursor3-2, collabCursor3-3;
-    animation-delay: 3s, 3.9s, 4.5s, 5s;
-    animation-duration: 0.7s,0.5s,0.5s,0.5s;
+    animation-name: collabCursor3, collabCursor3-1, collabCursor3-2, collabCursor3-3, collabCursor3-4;
+    animation-delay: 0.5s, 1.4s, 2.8s, 3.5s, 4s;
+    animation-duration: 0.7s,0.5s,0.5s,0.5s, 0.5s;
     left: 120%;
     top: -180px;
-    animation-fill-mode: forwards, forwards, forwards, forwards;
+    animation-fill-mode: forwards, forwards, forwards, forwards, forwards;
     transition-timing-function: ease-in-out;
 }
 
 
 .visible.cross-collaboration-section .graphic .part2 .selection3 .dropdowninfo {
     animation-name: collabInfoShow;
-    animation-delay: 4s;
+    animation-delay: 1.3s;
     animation-duration: 0.1s;
     animation-fill-mode: forwards;
     transition-timing-function: ease-in-out;
@@ -1545,21 +1546,21 @@ footer .copyright {
 
 .visible.cross-collaboration-section .graphic .part2 .selection3 .row1 {
     animation-name: addOption;
-    animation-delay: 4.4s;
+    animation-delay: 2s;
     animation-duration: 0.1s;
     animation-fill-mode:forwards;
 }
 
 .visible.cross-collaboration-section .graphic .part2 .selection3 .row2 {
     animation-name: addOption;
-    animation-delay: 6s;
+    animation-delay: 3.5s;
     animation-duration: 0.1s;
     animation-fill-mode:forwards;
 }
 
 .visible.cross-collaboration-section .graphic .part2 .selection3 .info {
     animation-name: collabInfoShow;
-    animation-delay: 4s;
+    animation-delay: 2s;
     animation-duration: 0.1s;
     animation-fill-mode: forwards;
     transition-timing-function: ease-in-out;
@@ -1709,44 +1710,55 @@ footer .copyright {
 @keyframes collabCursor3 {
     from {
         left: 120%;
-        top: -180px;
+        top: -100px;
     }
     to {
         left: 45%;
-        top: -100%;
+        top: -30%;
     }
 }
 
 @keyframes collabCursor3-1 {
     from {
         left: 45%;
-        top: -100%;
+        top: -30%;
     }
     to {
         left: 35%;
-        top: 75%;
+        top: 52%;
     }
 }
 
 @keyframes collabCursor3-2 {
     from {
         left: 35%;
-        top: 75%;
+        top: 52%;
     }
     to {
         left: 34%;
-        top: 73%;
+        top: 56%;
+    }
+}
+
+@keyframes collabCursor3-4 {
+    from {
+        left: 35%;
+        top: 58%;
+    }
+    to {
+        left: 35%;
+        top: 75%;
     }
 }
 
 @keyframes collabCursor3-3 {
     from {
-        left: 44%;
-        top: 66%;
+        left: 34%;
+        top: 73%;
     }
     to {
         left: 35%;
-        top: 80%;
+        top: 58%;
     }
 }
 
