@@ -31,7 +31,7 @@
 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#"><span>Keep updated on twitter</span> <img src="assets/images/ico-twitter.svg" alt="Twitter" style="margin: 0 0 -20px -10px;"></a></li>
+                    <li><a href="#"><span>Keep updated on twitter</span> <img src="assets/images/ico-twitter.png" alt="Twitter" style="margin: 0 0 -20px -10px;"></a></li>
                     <li><a href="#"><span>Join the waitlist</span> <img src="assets/images/like.svg" alt="" style="margin: 0 0 -20px -10px;"></a></li>
                     <li><a href="#">Login</a></li>
                 </ul>
@@ -58,7 +58,7 @@
             </div>
         </div>
 
-        <div class="graphic desktop">
+        <div class="graphic desktop animation-enabled">
 
             <div class="editor">
                 <div class="tools">
@@ -228,7 +228,7 @@
                 everything. </p>
 
 
-            <div class="graphic desktop">
+            <div class="graphic desktop animation-enabled">
                 <div class="part1">
                     <div class="image"><img src="assets/images/cross-collab/editor.png" srcset="assets/images/cross-collab/editor.png 1x, assets/images/cross-collab/editor@2x.png 2x"></div>
                     <div class="selection">
@@ -289,7 +289,7 @@
             <h3>Build once, reuse<br><span>infinite times</span></h3>
             <p>Group any content such as images, text, embeds, tables, and more within components. Reuse them<br>anywhere, anytime. Any change will be reflected wherever the component is being used. </p>
 
-            <div class="graphic desktop">
+            <div class="graphic desktop animation-enabled">
                 <div class="image">
                     <!-- <img src="assets/images/multi-sharing/graphic.png" srcset="assets/images/multi-sharing/graphic.png 1x, assets/images/multi-sharing/graphic@2x.png 2x"> -->
                     <img src="assets/images/multi-screen.svg" alt="Multi Sharing">
@@ -334,7 +334,7 @@
 
     <!-- START: POWERFUL GRAPHS SECTION-->
 
-    <section class="powerful-graph-section">
+    <section class="powerful-graph-section animation-enabled">
         <div class="container">
             <h5>Powerful graphs</h5>
             <h3>The Matrix,<br>Connect <span>team wisdom</span></h3>
@@ -425,7 +425,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="assets/images/ico-twitter.svg" alt="Twitter"> Twitter
+                                <img src="assets/images/ico-twitter.png" alt="Twitter"> Twitter
                             </a>
                         </li>
                         <li>
@@ -474,7 +474,7 @@
 
         $(window).scroll(function(event) {
 
-            $("section").each(function(i, el) {
+            $(".animation-enabled").each(function(i, el) {
                 var el = $(el);
                 if (el.visible(true)) {
                     el.addClass("visible");
